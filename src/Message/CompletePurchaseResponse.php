@@ -51,6 +51,11 @@ class CompletePurchaseResponse extends AbstractResponse implements RedirectRespo
     {
         return $this->data['m_curr'];
     }
+    
+    public function getMoney()
+    {
+        return (string)$this->data['m_amount'].' '.$this->data['m_curr'];
+    }
 
     public function getMessage()
     {
